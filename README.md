@@ -11,10 +11,10 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
 
 - 🤖 **Copilot Agent Mode & Vision** - Watch Copilot understand UI designs and implement complex features across multiple files
 - 🎭 **MCP Server Integration** - Demonstrate extended capabilities with Playwright for testing and GitHub API integration
-- 🛡️ **Security First** - Showcase GHAS scanning and Copilot-powered vulnerability fixes
 - 🧪 **Test Generation** - Exhibit Copilot's ability to analyze coverage and generate meaningful tests
 - 🔄 **CI/CD & IaC** - Generate deployment workflows and infrastructure code with natural language
 - 🎯 **Custom Instructions** - Show how Copilot can be tailored to understand internal frameworks and standards
+- 📜 **Custom Prompt Files** - Automate repetitive tasks and documentation updates with ease
 
 ## 🏗️ Architecture
 
@@ -38,7 +38,18 @@ erDiagram
 
 ## 🎯 Hands-On Scenarios
 
-1. **Requirements Specifications and Agentic Implementation**
+## TENTANTIVE AGENDA - SUBJECT TO CHANGE - REPO WILL BE MOVED TO NEW ORG ONCE COMPLETED ##
+
+1. **GUIDED HANDS-ON: Create Custom Instructions and a Custom Prompt File**
+   This activity will be performed together as a group.
+   - Use GitHub Copilot Internal Prompting to update the custom instructions for the OctoCAT Supply project.
+     - Hint: Use the "Generate Instructions" prompt to update the custom instructions for the OctoCAT Supply project.
+   - Use GitHub Copilot Internal Prompting to create a custom prompt file for the OctoCAT Supply project to update all existing documentation for the project.
+      - Hint: Use the "Prompt Files" prompt to create a custom prompt file for the OctoCAT Supply project.  
+   - Execute the custom prompt file to update all existing documentation for the project.
+      - Hint: Use the slash command to execute the prompt all existing documentation for the project.  Specify the README.md file and the docs/architecture.md file if you only want that updated. 
+
+2. **Requirements Specifications and Agentic Implementation**
    - Use a custom prompt to define features and an implementation plan
       - Use the "Plan" prompt combined with the MonaFigurine.png file (found in ./docs/design) to create an implementation plan for a new product offering on the website.
    - Generate UI components from design mockups (using Copilot Vision) and Generated Implementation Plan.
@@ -49,20 +60,10 @@ erDiagram
       - Use the CheckoutPage.png file to generate a checkout page for the new product offering.
       - Integrate the checkout page into the existing React application.
 
-2. **GUIDED HANDS-ON: Create a Chat Mode**
+3. **GUIDED HANDS-ON: Create a Chat Mode**
    This activity will be performed together as a group.
    - Have Copilot Create a Custom Chat Mode using **Agent Mode**
-      - Use Agent Mode and ask Copilot to pull the gist from https://gist.github.com/burkeholland/88af0249c4b6aff3820bf37898c8bacf.  Hint: Use the "Create a Chat Mode" prompt and #fetch the url of the gist. 
-
-
-3. **GUIDED HANDS-ON: Create Custom Instructions and a Custom Prompt File**
-   This activity will be performed together as a group.
-   - Use GitHub Copilot Internal Prompting to update the custom instructions for the OctoCAT Supply project.
-     - Hint: Use the "Generate Instructions" prompt to update the custom instructions for the OctoCAT Supply project.
-   - Use GitHub Copilot Internal Prompting to create a custom prompt file for the OctoCAT Supply project to update all existing documentation for the project.
-      - Hint: Use the "Prompt Files" prompt to create a custom prompt file for the OctoCAT Supply project.  
-   - Execute the custom prompt file to update all existing documentation for the project.
-      - Hint: Use the slash command to execute the prompt all existing documentation for the project.  Specify the README.md file and the docs/architecture.md file if you only want that updated. 
+      - **NEED CHAT MODE HERE**
 
 4. **Test Generation and Coverage Improvement**
    - Analyze existing test coverage
