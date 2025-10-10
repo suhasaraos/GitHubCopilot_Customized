@@ -1,5 +1,5 @@
 
-# 🚀 OctoCAT Supply: The Ultimate GitHub Copilot Demo v1.13.0
+# 🚀 OctoCAT Supply: The Ultimate GitHub Copilot Hands-On Demo v2.0
 
 ![OctoCAT Supply](./frontend/public/hero.png)
 
