@@ -81,17 +81,17 @@ erDiagram
 
 
 ### NEW BRANCH NEEDED FOR THOSE THAT WANT A FRESH START -- WILL FINALIZE ONCE THE CONCEPT IS APPROVED ###
-2. **Requirements Specifications and Agentic Implementation**
+3. **Requirements Specifications and Agentic Implementation**
    - Use previously developed `custom chat mode` to define features and create an implementation plan
-      - Use the "Plan" prompt combined with the MonaFigurine.png file (found in ./docs/design) to create an implementation plan for a new product offering on the website.
-   - Generate UI components from design mockups (using Copilot Vision) and Generated Implementation Plan.
-      - Reference the Implementation Plan created in the previous step to build out the new product offering on the website.
-      - Use the MonaFigurine.png file to generate a product card component for the new product offering.
-      - Integrate the new components into the existing React application.
-   - Finalize the checkout Page using Copilot Vision
-      - Use the CheckoutPage.png file to generate a checkout page for the new product offering.
-      - Integrate the checkout page into the existing React application.
-
+      - Use the /docs/design/MonaFigurine.png file (found in ./docs/design) to create a new product offering on the website.
+         Sample Prompt: `Using the design in the ./docs/design/MonaFigurine.png file, create an a new product offering to the OctoCAT Supply website.  Price is $32.99, SKU is MONA-001, and description is "A beautiful handcrafted figurine inspired by the Mona Lisa."`
+      - Generate UI components from design mockups (using Copilot Vision) and Generated Implementation Plan.
+      - Review the Pull Request in your Repo that was created by Copilot Agent Mode and merge the one you like best.
+   - Use GitHub Copilot Agent mode to the Create Cart Page and Cart Icon.
+      - Syncronize your branch with the latest main branch.
+      - Start a New Chat using Agent Mode.  Select the Claude Sonnet 4 model or any other model that supports Agent Mode.
+      - Drag the cart.png file (found in ./docs/design) into the chat window.
+      - Ask Copilot to implement the a simple cart icon and cart page that displays the items in the cart.
 
 
 4. **Test Generation and Coverage Improvement**
