@@ -46,7 +46,7 @@ erDiagram
       - Sample Prompt: `@workspace Please give me details about the API of this project.`
       - Sample Prompt: `Are there any core features missing in my project?`
    - Use GitHub Copilot Internal Prompting to update the custom instructions for the OctoCAT Supply project.
-      - Use the `Gear` icon in the GitHub Copilot Chat window to select the `Generate Instructions` internal prompt. 
+      - Use the `Gear` icon in the GitHub Copilot Chat window to select the `Generate Agent Instructions` internal prompt. 
          - Create a generic (project wide) GitHub Copilot Instructions file.
             - Hint: This file should be in the base directory of the `.github` folder and have the name `copilot-instructions.md`.
          - Create an API specific GitHub Copilot Instructions file using the same process as before.
