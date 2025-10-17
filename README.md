@@ -31,16 +31,11 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
          - Create a generic (project wide) GitHub Copilot Instructions file.
             - Hint: This file should be in the base directory of the `.github` folder and have the name `copilot-instructions.md`.
          - Create an API specific GitHub Copilot Instructions file using the same process as before.
-            - Hint: This file should be in the `.github/instructions` direcotry and have a name that resembles `API.instructions.md`
-            - Sample Prompt: `Please create an API Specific custom instructions set and save in  #file:API.instructions.md `
+            - Hint: This file should be in the `.github/instructions` directory and have a name that resembles `API.instructions.md`
+            - Sample Prompt: `Please create an API Specific custom instructions set and save in  #API.instructions.md `
    - Ask GitHub Copilot questions about your project and discover the use of the `Custom Instructions` files that have been created. 
       - How does your response compare to before?
    - Review Existing GitHub Copilot Prompt files to learn about how they can help speed up your workflow.  Execute one if you'd like.
-   - Use GitHub Copilot Internal Prompting to create a custom prompt file for the OctoCAT Supply project to update all existing documentation for the project.
-       - Hint: Use the "Prompt Files" prompt to create a custom prompt file for the OctoCAT Supply project.
-       - Sample Prompt: `Complete the prompt file to update the documentation of this project or the specified file mentioned by the user.  Only update the prompt file, do not update any documentation.`
-    - Execute the custom prompt file to update all existing documentation for the project.
-        - Hint: Use the slash command to execute the prompt all existing documentation for the project.  Specify the README.md file and the docs/architecture.md file if you only want that updated. 
 
 2. **GUIDED HANDS-ON: Create a Chat Mode**
    This activity will be performed together as a group.
@@ -77,7 +72,7 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
       - Drag the cart.png file (found in ./docs/design) into the chat window.
       - Ask Copilot to implement the a simple cart icon and cart page that displays the items in the cart.
 
-
+---
 4. **Test Generation and Coverage Improvement**
    - Analyze existing test coverage using `Ask` Mode. 
        - Sample Prompt:  `Please analyze my current test coverage and identify any missing test cases.`
@@ -85,6 +80,13 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
       - Hint: Use the "unit test coverage" prompt to generate unit tests for the Product and Supplier routes.
    - Improve coverage based on analysis
    - BONUS: Ask GitHub Copilot to execute the tests using the Playwright MCP server.
+---
+5. ** Documentation Update **
+   - Use GitHub Copilot Internal Prompting to create a custom prompt file for the OctoCAT Supply project to update all existing documentation for the project.
+       - Hint: Use the "Prompt Files" prompt to create a custom prompt file for the OctoCAT Supply project.
+       - Sample Prompt: `Complete the prompt file to update the documentation of this project or the specified file mentioned by the user.  Only update the prompt file, do not update any documentation.`
+    - Execute the custom prompt file to update all existing documentation for the project.
+        - Hint: Use the slash command to execute the prompt all existing documentation for the project.  Specify the README.md file and the docs/architecture.md file if you only want that updated. 
 
 ---
 
