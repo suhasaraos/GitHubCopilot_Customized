@@ -25,9 +25,8 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
    - Use GitHub Copilot Ask Mode and Agent to ask Copilot about the API of the project or any other question about your repo and run the project to see it live.  
       - Sample Prompt: `Please give me details about the API of this project and deploy it so I can see it live.`
       - Sample Prompt: `Are there any core features missing in my project?`
-      - Bonus: `Explain the database operations with mermaid`
-   - Use GitHub Copilot Internal Prompting to update the custom instructions for the OctoCAT Supply project.
-      - Use the `Gear` icon in the GitHub Copilot Chat window to select the `Generate Agent Instructions` internal prompt. 
+   - Use GitHub Copilot to update or create the custom instructions for the OctoCAT Supply project.
+      - Use the `Gear` icon in the GitHub Copilot Chat window to select the `Generate Agent Instructions`  prompt. 
          - Create a generic (project wide) GitHub Copilot Instructions file.
             - Hint: This file should be in the base directory of the `.github` folder and have the name `copilot-instructions.md`.
          - Create an API specific GitHub Copilot Instructions file using the same process as before.
