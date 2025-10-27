@@ -35,12 +35,12 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
    - Ask GitHub Copilot questions about your project and discover the use of the `Custom Instructions` files that have been created. 
       - How does your response compare to before?
    - Review Existing GitHub Copilot Prompt files to learn about how they can help speed up your workflow.  Execute one if you'd like.
-
+---
 2. **GUIDED HANDS-ON: Review a Custom Agent (Chat Mode) and how to creat one**
    This activity will be performed together as a group.
    - Review the Copilot Custom Agent (Chat Mode) in the `.github/chatmodes`.
    - Create a Custom Agent (Chat Mode) for the OctoCAT Supply project if you would like. 
-
+---
 3. **Requirements Specifications and Agentic Implementation**
    - Have GitHub Copilot build and deploy the existing implementation of the Supply Chain store.
       - Sample Prompt: `Please build and run my project so that I can see its existing state`  
