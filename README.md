@@ -36,34 +36,15 @@ This isn't just another demo app - it's a carefully crafted showcase that demons
       - How does your response compare to before?
    - Review Existing GitHub Copilot Prompt files to learn about how they can help speed up your workflow.  Execute one if you'd like.
 
-2. **GUIDED HANDS-ON: Create a Custom Agent (Chat Mode)**
+2. **GUIDED HANDS-ON: Review a Custom Agent (Chat Mode) and how to creat one**
    This activity will be performed together as a group.
-   - Have Copilot Create a Custom Agent (Chat Mode) using **Agent Mode**
-      - Use the `Gear` icon in the GitHub Copilot Chat window to select the `Modes` internal prompt.
-         
-         **Hint: Sample Custom Agent:**
-         ```markdown
-         ---
-         tools: ['search', 'githubRepo', 'todos', 'github/create_pull_request_with_copilot']
-         description: Explore implementation ideas
-         model: Claude Sonnet 4
-         ---
-         Your goal is to creatively explore an idea and implement potential solutions.
+   - Review the Copilot Custom Agent (Chat Mode) in the `.github/chatmodes`.
+   - Create a Custom Agent (Chat Mode) for the OctoCAT Supply project if you would like. 
 
-         FIRST deeply research (using search tools, run in parallel as much as possible) the problem and solution space for the given idea.
-
-         THEN implement the solutions in this codebase in collaboration with coding agent. For each variation, call GitHub's `create_pull_request_with_copilot`. Focus on handing over the implementation details, Copilot coding agent will handle the step by step implementation. Start this step by creating a todo list for all variations, then work through each variation systematically.
-
-         Pause.
-         ```
-
----
-### 🛑 If you were unable to complete steps 1 & 2, please merge `Phase_1` branch into `main` to proceed 🛑 ###
----
 3. **Requirements Specifications and Agentic Implementation**
    - Have GitHub Copilot build and deploy the existing implementation of the Supply Chain store.
       - Sample Prompt: `Please build and run my project so that I can see its existing state`  
-   - Use previously developed `custom chat mode` to define features and create an implementation plan
+   - Use previously reviewed `custom chat mode` to define features and create an implementation plan
       - Use the /docs/design/MonaFigurine.png file (found in ./docs/design) to create a new product offering on the website.
           - Sample Prompt: `Using the design in the ./docs/design/MonaFigurine.png file, create an a new product offering to the OctoCAT Supply website.  Price is $32.99, SKU is MONA-001, and description is "A beautiful handcrafted figurine inspired by the Mona Lisa."`
       - Generate UI components from design mockups (using Copilot Vision) and Generated Implementation Plan.
