@@ -14,6 +14,14 @@ describe('Branch API', () => {
         resetBranches();
     });
 
+    it('should return 400 for missing required fields', async () => {
+        const response = await request(app).post('/branches').send({
+            branchId: 4,
+            headquartersId: 1
+        });
+        expect(response.status).toBe(400);
+    });
+
     it('should create a new branch', async () => {
         const newBranch = {
             branchId: 3,

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useQuery } from 'react-query';
 import { api } from '../../../api/config';
 import { useTheme } from '../../../context/ThemeContext';
+import { useCart } from '../../../context/CartContext';
 
 interface Product {
   productId: number;
@@ -26,8 +27,10 @@ export default function Products() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const [addedId, setAddedId] = useState<number | null>(null);
   const { data: products, isLoading, error } = useQuery('products', fetchProducts);
   const { darkMode } = useTheme();
+  const { addToCart } = useCart();
 
   const filteredProducts = products?.filter(product => 
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -43,14 +46,16 @@ export default function Products() {
 
   const handleAddToCart = (productId: number) => {
     const quantity = quantities[productId] || 0;
-    if (quantity > 0) {
-      // TODO: Implement cart functionality
-      alert(`Added ${quantity} items to cart`);
-      setQuantities(prev => ({
-        ...prev,
-        [productId]: 0
-      }));
-    }
+    if (quantity <= 0) return;
+    const product = products?.find(p => p.productId === productId);
+    if (!product) return;
+    addToCart(
+      { productId: product.productId, name: product.name, price: product.price, imgName: product.imgName, discount: product.discount },
+      quantity
+    );
+    setQuantities(prev => ({ ...prev, [productId]: 0 }));
+    setAddedId(productId);
+    setTimeout(() => setAddedId(prev => (prev === productId ? null : prev)), 1800);
   };
 
   const handleProductClick = (product: Product) => {
@@ -179,7 +184,7 @@ export default function Products() {
                         aria-label={`Add ${quantities[product.productId] || 0} ${product.name} to cart`}
                         id={`add-to-cart-${product.productId}`}
                       >
-                        Add to Cart
+                        {addedId === product.productId ? '✓ Added!' : 'Add to Cart'}
                       </button>
                     </div>
                   </div>
