@@ -133,6 +133,7 @@ Use VS Code command palette:
 
 - [Detailed Architecture](./docs/architecture.md)
 - [Build Instructions](./docs/build.md)
+- [Product Catalog](./docs/products.md)
 
 ---
 
