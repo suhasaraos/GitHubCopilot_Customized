@@ -1,0 +1,13 @@
+{
+  "github.copilot.hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "pwsh -NoProfile -NonInteractive -File ./scripts/log-tool-use.ps1",
+        "env": {
+          "AUDIT_LOG": ".github/hooks/audit.log"
+        }
+      }
+    ]
+  }
+}

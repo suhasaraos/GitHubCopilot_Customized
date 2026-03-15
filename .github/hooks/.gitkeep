@@ -1,0 +1,2 @@
+# Audit log directory – tracked by git so the folder exists on fresh clones.
+# The actual audit.log file is generated at runtime and is .gitignored.
