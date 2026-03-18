@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useQuery } from 'react-query';
 import { api } from '../../../api/config';
 import { useTheme } from '../../../context/ThemeContext';
+import { useCart } from '../../../context/CartContext';
 
 interface Product {
   productId: number;
@@ -16,6 +17,9 @@ interface Product {
   discount?: number;
 }
 
+const getEffectivePrice = (price: number, discount?: number): number =>
+  discount ? price * (1 - discount) : price;
+
 const fetchProducts = async (): Promise<Product[]> => {
   const { data } = await axios.get(`${api.baseURL}${api.endpoints.products}`);
   return data;
@@ -28,6 +32,7 @@ export default function Products() {
   const [showModal, setShowModal] = useState(false);
   const { data: products, isLoading, error } = useQuery('products', fetchProducts);
   const { darkMode } = useTheme();
+  const { addToCart } = useCart();
 
   const filteredProducts = products?.filter(product => 
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -44,8 +49,16 @@ export default function Products() {
   const handleAddToCart = (productId: number) => {
     const quantity = quantities[productId] || 0;
     if (quantity > 0) {
-      // TODO: Implement cart functionality
-      alert(`Added ${quantity} items to cart`);
+      const product = products?.find(p => p.productId === productId);
+      if (product) {
+        addToCart({
+          productId: product.productId,
+          name: product.name,
+          price: getEffectivePrice(product.price, product.discount),
+          quantity,
+          imgName: product.imgName,
+        });
+      }
       setQuantities(prev => ({
         ...prev,
         [productId]: 0
@@ -135,7 +148,7 @@ export default function Products() {
                       {product.discount ? (
                         <div>
                           <span className="text-gray-500 line-through text-sm mr-2">${product.price.toFixed(2)}</span>
-                          <span className="text-primary text-xl font-bold">${(product.price * (1 - product.discount)).toFixed(2)}</span>
+                          <span className="text-primary text-xl font-bold">${getEffectivePrice(product.price, product.discount).toFixed(2)}</span>
                         </div>
                       ) : (
                         <span className="text-primary text-xl font-bold">${product.price.toFixed(2)}</span>
